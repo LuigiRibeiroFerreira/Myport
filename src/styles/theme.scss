@@ -1,0 +1,45 @@
+// Import Angular Material theming functions
+@import '~@angular/material/theming';
+@import '../node_modules/@angular/material/theming';
+
+
+// Define your color palettes for the dark theme
+$dark-primary: #8438f5;
+$dark-accent: #fdfbfd;
+$dark-warn: #525052;
+$dark-background:#141215;
+
+$dark-theme: mat-dark-theme((
+  color: (
+    primary: $dark-primary,
+    accent: $dark-accent,
+    warn: $dark-warn,
+    background: $dark-background,
+    surface: $dark-background,
+    on-primary: #fdfbfd,
+    on-accent: $dark-background,
+    on-warn: $dark-background,
+  ),
+));
+
+// Define your color palettes for the light theme
+$light-primary: #3a86ff;
+$light-accent: #fdfbfd;
+$light-warn: #525052;
+
+$light-theme: mat-light-theme((
+  color: (
+    primary: $light-primary,
+    accent: $light-accent,
+    warn: $light-warn,
+    background: #ffffff,
+    surface: #fdfbfd,
+    on-primary: #000000,
+    on-accent: #ffffff,
+    on-warn: #ffffff,
+  ),
+));
+
+// Include the themes in your project
+@include angular-material-theme($dark-theme);
+@include angular-material-theme($light-theme);

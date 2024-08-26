@@ -1,0 +1,11 @@
+@import './styles/theme.scss';
+@import '~@angular/material/theming';
+@import '../node_modules/@angular/material/theming';
+
+.dark-theme {
+  @include angular-material-theme($dark-theme);
+}
+
+.light-theme {
+  @include angular-material-theme($light-theme);
+}
